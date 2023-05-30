@@ -14,3 +14,10 @@ vim.keymap.set("n","<leader>wk","<C-w>k",arg)
 vim.keymap.set("n","j",[[v:count ? 'j':'gj']],{noremap = true, expr = true})
 vim.keymap.set("n","k",[[v:count ? 'k':'gk']],{noremap = true, expr = true})
 
+-- buuferline
+
+vim.keymap.set("n","<leader>bp",":BufferLineCyclePrev<CR>",{noremap = true})
+vim.keymap.set("n","<leader>bn",":BufferLineCycleNext<CR>",{noremap = true})
+
+
+

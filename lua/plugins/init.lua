@@ -24,6 +24,33 @@ local  default = {
 		end,
 		event = "VeryLazy",
 	},
+	{
+		"williamboman/mason-lspconfig.nvim",
+		config = function()
+			require("mason-lspconfig").setup()
+		end,
+	},
+	{
+		"neovim/nvim-lspconfig",
+		event = "VeryLazy",
+	},
+	{
+		"akinsho/bufferline.nvim",
+		dependencies = "kyazdani42/nvim-web-devicons",
+		config = function()
+			require("plugins.configs.bufferline")
+		end,
+	},
+	{
+		"kyazdani42/nvim-tree.lua",
+		dependencies = "kyazdani42/nvim-web-devicons",
+		config = function()
+			require("plugins.configs.nvim-tree")
+		end,
+		keys = {
+			{"<leader>tt",":NvimTreeToggle<CR>",desc = "open nvim-tree toggle"},
+		},
+	},
 	
 
 }
