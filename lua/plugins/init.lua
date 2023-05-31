@@ -19,21 +19,36 @@ local  default = {
 	{
 		"williamboman/mason.nvim",
 		build = ":MasonUpdate",
-		config = function()
-			require("mason").setup()
-		end,
 		event = "VeryLazy",
 	},
 	{
 		"williamboman/mason-lspconfig.nvim",
-		config = function()
-			require("mason-lspconfig").setup()
-		end,
 	},
 	{
 		"neovim/nvim-lspconfig",
 		event = "VeryLazy",
 	},
+	{ 'neovim/nvim-lspconfig', },
+	{ 'hrsh7th/cmp-nvim-lsp', },
+	{ 'hrsh7th/cmp-buffer', },
+	{ 'hrsh7th/cmp-path', },
+	{ 'hrsh7th/cmp-cmdline', },
+	{ 'hrsh7th/nvim-cmp', },
+	-- For vsnip users.
+	{ 'hrsh7th/cmp-vsnip', },
+	{ 'hrsh7th/vim-vsnip', },
+
+	-- For luasnip users.
+	-- Plug 'L3MON4D3/LuaSnip'
+	-- Plug 'saadparwaiz1/cmp_luasnip'
+
+	-- For ultisnips users.
+	-- Plug 'SirVer/ultisnips'
+	-- Plug 'quangnguyen30192/cmp-nvim-ultisnips'
+
+	-- For snippy users.
+	-- Plug 'dcampos/nvim-snippy'
+	-- Plug 'dcampos/cmp-snippy'
 	{
 		"akinsho/bufferline.nvim",
 		dependencies = "kyazdani42/nvim-web-devicons",
@@ -48,7 +63,7 @@ local  default = {
 			require("plugins.configs.nvim-tree")
 		end,
 		keys = {
-			{"<leader>tt",":NvimTreeToggle<CR>",desc = "open nvim-tree toggle"},
+			{"<leader>tt","<cmd>NvimTreeToggle<CR>",desc = "open nvim-tree toggle"},
 		},
 	},
 	
@@ -56,4 +71,8 @@ local  default = {
 }
 
 require("lazy").setup(default)
+require("mason").setup()
+require("mason-lspconfig").setup()
 	
+require("plugins/configs/lspconfig")
+require("plugins/configs/nvm-cmp")
