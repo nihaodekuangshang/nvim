@@ -1,4 +1,5 @@
 local cmp = require'cmp'
+local lspkind = require('lspkind')
 
   cmp.setup({
     snippet = {
@@ -21,6 +22,17 @@ local cmp = require'cmp'
       ['<C-e>'] = cmp.mapping.abort(),
       ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
     }),
+    formatting = {
+	    format = lspkind.cmp_format({
+	    with_text = true,
+	    maxwidth = 50,
+	    before = function (entry,vim_item)
+		vim_item.menu = "["..string.upper(entry.source.name).."]"
+		return vim_item
+	    	
+	    end
+    	})
+    },
     sources = cmp.config.sources({
       { name = 'nvim_lsp' },
       { name = 'vsnip' }, -- For vsnip users.
@@ -29,6 +41,7 @@ local cmp = require'cmp'
       -- { name = 'snippy' }, -- For snippy users.
     }, {
       { name = 'buffer' },
+      { name = 'path' },
     })
   })
 
@@ -63,5 +76,26 @@ local cmp = require'cmp'
   local capabilities = require('cmp_nvim_lsp').default_capabilities()
   -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
   require('lspconfig')['lua_ls'].setup {
+    capabilities = capabilities
+  }
+  require('lspconfig')['dockerls'].setup {
+    capabilities = capabilities
+  }
+  require('lspconfig')['cssls'].setup {
+    capabilities = capabilities
+  }
+  require('lspconfig')['html'].setup {
+    capabilities = capabilities
+  }
+  require('lspconfig')['jsonls'].setup {
+    capabilities = capabilities
+  }
+  require('lspconfig')['pyright'].setup {
+    capabilities = capabilities
+  }
+  require('lspconfig')['tsserver'].setup {
+    capabilities = capabilities
+  }
+  require('lspconfig')['rust_analyzer'].setup {
     capabilities = capabilities
   }

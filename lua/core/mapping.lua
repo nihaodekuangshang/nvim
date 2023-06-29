@@ -16,8 +16,8 @@ vim.keymap.set("n","k",[[v:count ? 'k':'gk']],{noremap = true, expr = true})
 
 -- buuferline
 
-vim.keymap.set("n","<leader>bp","<cmd>BufferLineCyclePrev<CR>",{noremap = true})
-vim.keymap.set("n","<leader>bn","<cmd>BufferLineCycleNext<CR>",{noremap = true})
+vim.keymap.set("n","<leader>bh","<cmd>BufferLineCyclePrev<CR>",{noremap = true})
+vim.keymap.set("n","<leader>bl","<cmd>BufferLineCycleNext<CR>",{noremap = true})
 vim.keymap.set("n","<leader>bd","<cmd>bd<CR>",{noremap = true,desc = "关闭缓冲区"})
 
 

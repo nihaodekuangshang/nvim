@@ -37,6 +37,9 @@ local  default = {
 	-- For vsnip users.
 	{ 'hrsh7th/cmp-vsnip', },
 	{ 'hrsh7th/vim-vsnip', },
+	{ 'rafamadriz/friendly-snippets', },
+	-- lspkind
+	{ 'onsails/lspkind-nvim',},
 
 	-- For luasnip users.
 	-- Plug 'L3MON4D3/LuaSnip'
