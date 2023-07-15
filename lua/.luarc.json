@@ -1,0 +1,30 @@
+{
+    "workspace.library": [
+        "/home/cron/.config/nvim",
+        "/home/cron/.local/share/nvim/lazy/lazy.nvim",
+        "/home/cron/.local/share/nvim/lazy/mason.nvim",
+        "/home/cron/.local/share/nvim/lazy/mason-lspconfig.nvim",
+        "/home/cron/.local/share/nvim/lazy/nvim-lspconfig",
+        "/home/cron/.local/share/nvim/lazy/cmp-cmdline",
+        "/home/cron/.local/share/nvim/lazy/nvim-cmp",
+        "/home/cron/.local/share/nvim/lazy/vim-vsnip",
+        "/home/cron/.local/share/nvim/lazy/cmp-vsnip",
+        "/home/cron/.local/share/nvim/lazy/cmp-buffer",
+        "/home/cron/.local/share/nvim/lazy/cmp-nvim-lsp",
+        "/home/cron/.local/share/nvim/lazy/lspkind-nvim",
+        "/home/cron/.local/share/nvim/lazy/cmp-path",
+        "/home/cron/.local/share/nvim/lazy/friendly-snippets",
+        "/home/cron/.local/share/nvim/lazy/nvim-web-devicons",
+        "/home/cron/.local/share/nvim/lazy/bufferline.nvim",
+        "/tmp/.mount_nvim.anNIyMc/usr/share/nvim/runtime",
+        "/tmp/.mount_nvim.anNIyMc/usr/share/nvim/runtime/pack/dist/opt/matchit",
+        "/tmp/.mount_nvim.anNIyMc/usr/lib/nvim",
+        "/home/cron/.local/state/nvim/lazy/readme",
+        "/home/cron/.local/share/nvim/lazy/cmp-cmdline/after",
+        "/home/cron/.local/share/nvim/lazy/cmp-vsnip/after",
+        "/home/cron/.local/share/nvim/lazy/cmp-buffer/after",
+        "/home/cron/.local/share/nvim/lazy/cmp-nvim-lsp/after",
+        "/home/cron/.local/share/nvim/lazy/cmp-path/after",
+        "${3rd}/luassert/library"
+    ]
+}
