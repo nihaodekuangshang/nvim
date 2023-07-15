@@ -76,6 +76,13 @@ local  default = {
 			vim.g.rustfmt_autosave = 1
 		end
 	},
+	{
+		"akinsho/toggleterm.nvim",
+		version = "*",
+		config = function ()
+			require("plugins.configs.toggleterm")
+		end
+	},
 
 }
 
