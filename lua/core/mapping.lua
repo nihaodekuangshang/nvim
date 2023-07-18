@@ -2,13 +2,14 @@
 -- keybinding
 vim.g.mapleader = " "
 local arg = {noremap = true,silent = true}
+-- 分屏操作
 vim.keymap.set("n","<leader>wv","<C-w>v",arg)
 vim.keymap.set("n","<leader>ws","<C-w>s",arg)
 vim.keymap.set("n","<leader>wl","<C-w>l",arg)
 vim.keymap.set("n","<leader>wh","<C-w>h",arg)
 vim.keymap.set("n","<leader>wj","<C-w>j",arg)
 vim.keymap.set("n","<leader>wk","<C-w>k",arg)
-vim.keymap.set("n","<leader>wq","<cmd>q<CR>",arg)
+vim.keymap.set("n","<leader>q","<cmd>q<CR>",arg)
 
 -- 可视行跳转
  
@@ -34,9 +35,10 @@ vim.keymap.set("n","<leader>9","<cmd>BufferLineGoToBuffer 9<CR>",{noremap = true
 
 
 
-
 --rust编译运行
 vim.keymap.set("n","<leader>rb","<cmd>te cargo build<CR>i<CR>",{noremap = true,desc = "编译rust"})
 vim.keymap.set("n","<leader>rr","<cmd>te cargo run<CR>",{noremap = true,desc = "运行rust"})
 
 
+--  显示空格和制表符
+vim.opt.listchars ="tab:-->"
